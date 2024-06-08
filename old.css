@@ -1,0 +1,394 @@
+/* -------------------------- *\
+	Globel
+\* -------------------------- */
+* {
+	box-sizing: border-box;
+	position: relative;
+}
+html,body{
+	margin: 0;
+    padding: 0;
+    font-family: "Yomogi","Klee One", cursive;
+}
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 20px;
+    letter-spacing: 4px;
+    line-height: 30px;
+}
+
+/* -------------------------- *\
+	Layout
+\* -------------------------- */
+.container{
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+}
+
+/* -------------------------- *\
+	Component
+\* -------------------------- */
+.side_nav{
+    position: fixed;
+    right:20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    opacity: 0;
+    transition: all 1s;
+}
+.side_nav .item{
+    margin: 12px 0;
+    background-color:transparent;
+    border: #2A4D14 solid 2px;
+}
+.side_nav .item:hover{
+    transform: scale(1.2);
+}
+.side_nav.show{
+    opacity: 1;
+}
+
+.bg_brown{
+    background-color: #DFDABA;
+}
+.bg_dark_brown{
+    background-color: #C9BA7C;
+}
+/* PageChange */
+
+.page_change{
+    width: 100%;
+    margin-top: 200px;
+}
+
+.change_title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.circle{
+    padding: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #2A4D14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DFDABA;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #2A4D14;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* -------------------------- *\
+	Jumboturn
+\* -------------------------- */
+.jumboturn{
+    width: 100%;
+    height:720px;
+    background-image: url(images/jumboturn.png);
+    background-size: cover;
+}
+
+@media screen and (max-width:1024px) {
+    .jumboturn{
+        height: 600px;
+    }
+}
+
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.logo img{
+    width: 160px;
+}
+
+.list{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.item{
+    display:flex;
+    margin:0 8px;
+    align-items: center;
+    cursor: pointer;
+    background-color: #DFDABA;
+    padding: 8px;
+    border-radius: 20px;
+    letter-spacing: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2A4D14;
+}
+.item img{
+    margin-right: 4px;
+}
+
+/* -------------------------- *\
+	Green
+\* -------------------------- */
+.green{
+    padding-top: 120px;
+}
+.green .title_img{
+    height: 120px;
+}
+.green .container{
+    text-align: center;
+}
+
+/* -------------------------- *\
+	Latte
+\* -------------------------- */
+.latte{
+    max-width:1200px;
+    background-color: #DFDABA;
+    margin: 0 auto;
+    margin-top: 120px;
+
+}
+.latte .container>.row{
+    align-items: end;
+    justify-content: space-around;
+    margin-bottom: 80px;
+    background-image: url(images/bg_img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.latte_img img{
+    width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.latte_content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.latte_content .paragraph{
+    width: 480px;
+}
+
+.picture{
+    text-align: center;
+}
+.food{
+    margin-top: 120px;
+}
+.truck{
+    width: 60%;
+    text-align: left;
+}
+.truck img{
+    width: 100%;
+}
+.truck .title_img{
+    width: 480px;
+}
+.food_bg{
+    position: absolute;
+    width:480px;
+    right: 0;
+}
+
+@media screen and (max-width:1200px) {
+    .latte .container>.row{
+        flex-wrap: wrap;
+    }
+}
+
+/* -------------------------- *\
+	Brand
+\* -------------------------- */
+.bg_dark_brown{
+    margin-top: -8px;
+    color: #fff;
+}
+.brand .container{
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.logo_img{
+    width: 30%;
+    margin-right: 12px;
+}
+.logo_content{
+    width: 70%;
+}
+.logo_content img{
+    width: 400px;
+}
+.logo_content p{
+    padding-left: 80px;
+    line-height: 40px;
+}
+/* -------------------------- *\
+	Motivation
+\* -------------------------- */
+.motivation{
+    padding: 80px 0;
+}
+.motivation .container{
+    text-align: center;
+}
+.video{
+    text-align: center;
+    color: #2A4D14;
+}
+
+/* -------------------------- *\
+	Menu
+\* -------------------------- */
+.menu{
+    background-color: #fff;
+}
+.menu>.container{
+    margin-top: -8px;
+    padding: 40px 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product{
+    width: 400px;
+    margin: 20px;
+}
+.product_content{
+    width: 320px;
+    margin: 0 auto;
+}
+.product_img{
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product_img img{
+    width: 88px;
+}
+.category{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 24px;
+    color: #fff;
+}
+.product_content{
+    position: absolute;
+    bottom: 60px;
+    left: 48px;
+}
+.product_content .title{
+    margin: 0;
+    color: #2A4D14;
+    background-color: #DFDABA;
+    display: inline-block;
+    border-radius: 12px;
+    padding: 4px 8px;
+}
+.product_content .ingredient{
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.p_darkgreen .product_content .title{
+    background-color:#C9BA7C;
+    color:#fff;
+}
+
+.p_darkbrown .product_content .title{
+    background-color:#2A4D14;
+    color:#DFDABA;
+}
+
+.p_brown .product_content .title{
+    background-color:#9DBC98;
+    color:#2A4D14;
+}
+
+.p_brown .product_content .ingredient{
+    color: #2A4D14;
+}
+/* -------------------------- *\
+	Contact
+\* -------------------------- */
+.contact{
+    background-color: #9DBC98;
+    margin-top: -8px;
+    padding: 20px 0;
+    color: #fff;
+    padding-bottom: 120px;
+}
+.contact .container .row{
+    justify-content: center;
+    align-items: center;
+}
+.media {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: #fff 4px solid;
+}
+.media a{
+    margin: 12px;
+}
+.media a img{
+    width: 100px;
+}
+.pdf{
+    text-align: center;
+    margin: 40px 0;
+}
+.pdf_btn{
+    padding: 4px 8px;
+    background-color: #2A4D14;
+    border-radius: 12px;
+    font-size: 20px;
+    color: #C9BA7C;
+}
+.pdf_btn:hover{
+    background-color: #C9BA7C;
+    color: #2A4D14;
+}
+/* -------------------------- *\
+	Footer
+\* -------------------------- */
+.footer{
+    margin-top: -32px;
+    background-color: #2A4D14;
+    padding: 20px 160px;
+    color: #C9BA7C;
+}
+.footer .row{
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .row .col-img{
+    width: 25%;
+}
+.footer .row .col p{
+    line-height: 24px;
+}
