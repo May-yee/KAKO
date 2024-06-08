@@ -49,9 +49,13 @@ p{
     background-color:transparent;
     border: #2A4D14 solid 2px;
 }
+.side_nav .item:hover{
+    transform: scale(1.2);
+}
 .side_nav.show{
     opacity: 1;
 }
+
 .bg_brown{
     background-color: #DFDABA;
 }
