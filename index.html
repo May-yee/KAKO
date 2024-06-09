@@ -27,8 +27,13 @@
             </div>
         </div>
 
+        <div class="humberlist">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         <div class="side_nav">
-            <div class="nav nav_green"><img src="images/list_icon.png">關於KAKO</div>
+            <div class="nav nav_about"><img src="images/list_icon.png">關於KAKO</div>
             <div class="nav nav_brand"><img src="images/list_icon.png">品牌介紹</div>
             <div class="nav nav_menu"><img src="images/list_icon.png">豐富菜單</div>
             <div class="nav nav_contact"><img src="images/list_icon.png">製作團隊</div>
@@ -102,7 +107,7 @@
             </div>
 
             <div class="motivation">
-                <img src="images/motivation.png" width="400px">
+                <img src="images/motivation.png">
                 <p>近年來飲料店在台灣掀起一陣旋風，我們注意到人們開始注重健康。</p>
                 <p>消費者開始要求好品質的茶與配料，也有人選擇只喝不加糖的果汁和茶。</p>
                 <p>因此我們想在飲料與健康中取得平衡，創造出一個健康平價為主的綠拿鐵專賣店。</p>
@@ -297,13 +302,13 @@
                     </a>
                 </div>
             </div>
-            <div class="row">
-                <div>
-                    <img src="images/鱷魚上班族.png" width="200px">
+            <div class="more row">
+                <div class="pdf_img">
+                    <img src="images/鱷魚上班族.png">
                 </div>
                 <div class="pdf">
                     <h1>想要更了解KAKO Latte?</h1>
-                    <a href="./企劃書.pdf" class="pdf_btn" target="_blank">點我查看企劃書</a>
+                    <a href="./企劃書.pdf" class="pdf_btn" target="_blank">點我前往企劃書</a>
                 </div>
             </div>
         </div>
@@ -340,6 +345,13 @@
                 $('.side_nav').removeClass('show');
             }
         })
+        $('.humberlist').click(function(){
+            $('.side_nav').toggleClass('humber_show');
+        })
+        $('.side_nav .nav').click(function(){
+            $('.side_nav').removeClass('humber_show');
+        })
+
         $('.nav_about').on('click', function(event) {
             $('html, body').animate({
                 scrollTop: $('#about').offset().top
